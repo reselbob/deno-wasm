@@ -1,0 +1,21 @@
+language: rust
+os: ubuntu
+branches:
+    only:
+    - master
+before_install:
+    - pwd
+    - rustc --version
+    - rustup target add wasm32-unknown-unknown
+    - cargo install wasm-gc
+    - export PATH="$HOME/.cargo/bin:$PATH"
+    - cargo build --target wasm32-unknown-unknown
+    - wasm-gc target/wasm32-unknown-unknown/debug/wasm_deno_example.wasm
+    - curl -fsSL https://deno.land/x/install/install.sh | sh
+    - ls -l $HOME/.deno
+    - export DENO_INSTALL="$HOME/.deno"
+    - export PATH="$DENO_INSTALL/bin:$PATH"
+    - deno run https://deno.land/std/examples/welcome.ts
+    
+script: 
+    - deno run --allow-read main.ts
