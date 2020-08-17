@@ -1,12 +1,17 @@
 [package]
-name = "rust_for_deno"
-version = "0.1.0"
+name = "cube-it"
+version = "0.9.0"
 authors = ["root"]
 edition = "2018"
+authors = ["Bob Reselman <reselbob@gmail.com>"]
+description = "A small project to demonstrate how to run to create a WebAssembly binary"
+license = "MIT/Apache-2.0"
+repository = "https://github.com/reselbob/deno-wasm"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+wasm-bindgen = "0.2"
 
 [lib]
-crate-type =["cdylib"]
+crate-type = ["cdylib", "rlib"]
