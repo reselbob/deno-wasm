@@ -11,7 +11,7 @@ before_install:
     - export PATH="$HOME/.cargo/bin:$PATH"
     - cd ./rust_for_deno
     - cargo build --target wasm32-unknown-unknown
-    - wasm-gc ./target/wasm32-unknown-unknown/debug/wasm_deno_example.wasm
+    - wasm-gc ./target/wasm32-unknown-unknown/debug/rust_for_deno.wasm
     - cd ..
     - curl -fsSL https://deno.land/x/install/install.sh | sh
     - ls -l $HOME/.deno
