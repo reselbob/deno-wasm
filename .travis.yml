@@ -6,7 +6,8 @@ branches:
 before_install:
     - pwd
     - rustc --version
-    - apt-get install libssl-dev pkg-config -y
+    - sudo apt-get update
+    - sudo apt-get -y install libssl-dev pkg-config 
     - rustup target add wasm32-unknown-unknown
     - cargo install wasm-pack
     - export PATH="$HOME/.cargo/bin:$PATH"
