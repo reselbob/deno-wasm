@@ -1,7 +1,6 @@
 [package]
 name = "cube-it"
 version = "0.9.0"
-authors = ["root"]
 edition = "2018"
 authors = ["Bob Reselman <reselbob@gmail.com>"]
 description = "A small project to demonstrate how to run to create a WebAssembly binary"
