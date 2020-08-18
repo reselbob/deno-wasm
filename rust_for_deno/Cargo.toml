@@ -1,5 +1,5 @@
 [package]
-name = "cube-it"
+name = "cube_it"
 version = "0.9.0"
 edition = "2018"
 authors = ["Bob Reselman <reselbob@gmail.com>"]
